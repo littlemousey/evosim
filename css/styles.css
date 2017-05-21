@@ -1,0 +1,54 @@
+table {
+	border-spacing: 0px;
+}
+td {
+	width: 42px;
+	height: 42px;
+	border: 0px;
+	padding: 0px;
+	border-spacing: 0px;
+
+}
+body {
+	font-family: "Gill Sans", Gill, sans-serif;
+	font-size: large;
+	color: white;
+	background-color: black;
+}
+/*.container > * {
+	display: inline-block;
+}*/
+h1 {
+	text-align: center;
+}
+
+div.contentPage {
+	clear: left;
+	float: left;
+	width:100%;
+	overflow: hidden;
+
+}
+
+div.view {
+	float: left;
+	width: 100%;
+	position: relative;
+	right:50%;
+}
+
+div.experiment {
+    float: left;
+    width: 46%;
+    position: relative;
+    left: 56%;
+    overflow: hidden;
+}
+
+div.log {
+    float: left;
+    width: 46%;
+    position: relative;
+    left: 52%;
+    overflow: hidden;
+}

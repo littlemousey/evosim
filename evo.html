@@ -1,48 +1,40 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<style>
-			table {
-				border-spacing: 0px;
-			}
-			td {
-				width: 42px;
-				height: 42px;
-				border: 0px;
-				padding: 0px;
-				border-spacing: 0px;
-			}
-			body {
-				font-family: "Gill Sans", Gill, sans-serif;
-			}
-			.container > * {
-				display: inline-block;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 	</head>
 	<body>
-		<div class="container">
-			<table id="t"></table>
-			<br>
-			<p id="time"></p>
-			<br>
-			<p id="top3"></p>
-			<br>
-			<!--<button onClick="javascript:refreshTop3();">top 3</button>
-			<br>-->
-			<p id="grazerInfo"></p>
+		<div class="contentPage">
+			<h1>Evolution simulator</h1>
+			<div class="view">
+				<div class="experiment">
+					<button onClick="javascript:go();">
+						step
+					</button>
+					<button onClick="javascript:stop();">
+						stop
+					</button>
+					<button onClick="javascript:play();">
+						play
+					</button>
+					<input type="range" min=10 max=500 step=10 name="slider" onchange="speed = 500-this.value; javascript:stop();javascript:play();">
+					<div class="container">
+						<table id="table"></table>
+					</div>
+				</div>
+				<div class="log">
+				<div class="extraInformation">
+					<p id="time"></p>
+					<br>
+					<p id="top3"></p>
+					<br>
+					<p id="grazerInfo"></p>
+					<h3>Time</h3>
+					<span id="timer"></span>
+					</div>
+			</div>
+			</div>
 		</div>
-		<button onClick="javascript:go();">
-			step
-		</button>
-		<button onClick="javascript:stop();">
-			stop
-		</button>
-		<button onClick="javascript:play();">
-			play
-		</button>
-		<input type="range" min=10 max=500 step=10 name="slider" onchange="speed = 500-this.value; javascript:stop();javascript:play();">
-
-		<script src="evo.js"></script>
-	</body>
+	<script src="_js/evo.js"></script>
+</body>
 </html>
