@@ -1,40 +1,43 @@
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
-	</head>
-	<body>
-		<div class="contentPage">
-			<h1>Evolution simulator</h1>
-			<div class="view">
-				<div class="experiment">
-					<button onClick="javascript:go();">
-						step
-					</button>
-					<button onClick="javascript:stop();">
-						stop
-					</button>
-					<button onClick="javascript:play();">
-						play
-					</button>
-					<input type="range" min=10 max=500 step=10 name="slider" onchange="speed = 500-this.value; javascript:stop();javascript:play();">
-					<div class="container">
-						<table id="table"></table>
-					</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"><!-- Bootstrap CSS-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<title></title>
+</head>
+<body>
+	<div class="container-fluid contentPage">
+		<h1>Evolution simulator</h1>
+		<div class="row">
+			<div class="col view">
+				<div class="options">
+					<button class="btn btn-primary" onclick="javascript:play();">play</button>
+					<button class="btn btn-secondary" onclick="javascript:go();">step</button>
+					<button class="btn btn-danger" onclick="javascript:stop();">stop</button>
+					<input max="500" min="10" name="slider" onchange="speed = 500-this.value; javascript:stop();javascript:play();" step="10" type="range"/>
 				</div>
-				<div class="log">
-				<div class="extraInformation">
-					<p id="time"></p>
-					<br>
-					<p id="top3"></p>
-					<br>
-					<p id="grazerInfo"></p>
-					<h3>Time</h3>
-					<span id="timer"></span>
-					</div>
+				<table id="table"></table>
 			</div>
+			<div class="col extraInformation">
+				<div class="board">
+				<p id="time"></p><br>
+				<p id="top3"></p><br>
+				<p id="grazerInfo"></p>
+				<h4>Time</h4><span id="timer"></span>
+			</div>
+				<div class="log">
+					<h4>Notes</h4>
+					<textarea id="writeblock" cols="35" maxlength="200" rows="3" placeholder="Here you can write your findings"></textarea>
+				</br>
+					<button onclick="submit()">Save text</button>
+					<div id="savedLogs"></div>
+				</div>
 			</div>
 		</div>
-	<script src="_js/evo.js"></script>
+	</div>
+	<script src="_js/evo.js">
+	</script>
 </body>
 </html>

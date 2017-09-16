@@ -1,4 +1,5 @@
 table {
+	margin-top: 10px;
 	border-spacing: 0px;
 }
 td {
@@ -10,7 +11,7 @@ td {
 
 }
 body {
-	font-family: "Gill Sans", Gill, sans-serif;
+	font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
 	font-size: large;
 	color: white;
 	background-color: black;
@@ -22,7 +23,23 @@ h1 {
 	text-align: center;
 }
 
-div.contentPage {
+h4 {
+	text-decoration: underline;
+}
+
+.options {
+	text-align: center;
+}
+
+div {
+	margin-top: 10px;
+}
+
+#timer {
+	font-family: "Aldrich";
+}
+
+/*div.contentPage {
 	clear: left;
 	float: left;
 	width:100%;
@@ -30,25 +47,20 @@ div.contentPage {
 
 }
 
-div.view {
+div.experiment-wrapper {
 	float: left;
-	width: 100%;
-	position: relative;
-	right:50%;
+	width: 80%;
 }
 
 div.experiment {
-    float: left;
-    width: 46%;
-    position: relative;
-    left: 56%;
-    overflow: hidden;
-}
+    margin: 0 auto;
+    max-width: 50%;
+}*/
 
-div.log {
+/*div.log {
     float: left;
     width: 46%;
     position: relative;
     left: 52%;
     overflow: hidden;
-}
+}*/
